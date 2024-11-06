@@ -1,4 +1,4 @@
-FROM    --platform=$TARGETOS/$TARGETARCH eclipse-temurin:8-jre-alpine
+FROM    --platform=$TARGETOS/$TARGETARCH eclipse-temurin:11-jre-alpine
 
 LABEL org.opencontainers.image.source="https://github.com/la-banquise/dockerfiles_ptero"
 
