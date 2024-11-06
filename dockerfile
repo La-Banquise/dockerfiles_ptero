@@ -1,7 +1,7 @@
-FROM    --platform=$TARGETOS/$TARGETARCH eclipse-temurin:21-alpine
+FROM    --platform=$TARGETOS/$TARGETARCH eclipse-temurin:21-jre-alpine
 RUN 	apk add --update curl \
 		&& rm -rf /var/cache/apk/* \
-		&& adduser -h /home/container container
+		&& adduser -D container
 
 USER        container
 ENV         USER=container HOME=/home/container
