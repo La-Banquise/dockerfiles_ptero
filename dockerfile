@@ -1,7 +1,7 @@
 FROM    --platform=$TARGETOS/$TARGETARCH eclipse-temurin:21-alpine
-RUN 	apt-get update -y \
-	&& apt-get install -y curl \
-	&& useradd -d /home/container -m container
+RUN 	apk add --update curl \
+		&& rm -rf /var/cache/apk/* \
+		&& useradd -d /home/container -m container
 
 USER        container
 ENV         USER=container HOME=/home/container
