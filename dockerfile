@@ -1,4 +1,7 @@
 FROM    --platform=$TARGETOS/$TARGETARCH eclipse-temurin:21-jre-alpine
+
+LABEL org.opencontainers.image.source="https://github.com/la-banquise/dockerfiles_ptero"
+
 RUN 	apk add --update curl \
 		&& rm -rf /var/cache/apk/* \
 		&& adduser -D container
